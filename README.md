@@ -20,26 +20,26 @@ To build this sample locally, you can either build using Docker, or using NPM.
 - To run using Docker, run `docker run -it -p 3000:3000 skillshare-api`
 - To run using NPM, run `npm start`
 
-##MangoDB local setup
-  sudo service docker status
-  docker pull mongo:4.0.4
-  sudo docker images
-  sudo mkdir -p /mongodata
-  docker run -d -p 27017-27019:27017-27019 -it -v mongodata:/data/db --name mongodb mongo:4.0.4
-  docker images
-  docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:4.0.4
-  docker container ls
+##MangoDB local setup <br />
+  sudo service docker status <br />
+  docker pull mongo:4.0.4 <br />
+  sudo docker images <br />
+  sudo mkdir -p /mongodata <br />
+  docker run -d -p 27017-27019:27017-27019 -it -v mongodata:/data/db --name mongodb mongo:4.0.4 <br />
+  docker images <br />
+  docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:4.0.4 <br />
+  docker container ls <br />
 
-  docker ps
-  docker ps -a (last state of container) 
-  docker rm --force mongodb
-  docker stop mongodb
-  docker ps
-  docker start mongodb
-  docker ps
+  docker ps <br />
+  docker ps -a (last state of container)  <br />
+  docker rm --force mongodb <br />
+  docker stop mongodb <br />
+  docker ps <br />
+  docker start mongodb <br />
+  docker ps <br />
   
-  docker exec -it mongodb bash
-  docker exec -it flamboyant_elion bash
+  docker exec -it mongodb bash <br />
+  docker exec -it flamboyant_elion bash <br />
   > show dbs
   > use sampledb
   > db.items.save({"name":"Pineapple","uid":4.0,"img":"/img/a.png"})
