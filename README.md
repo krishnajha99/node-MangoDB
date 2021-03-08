@@ -40,11 +40,11 @@ To build this sample locally, you can either build using Docker, or using NPM.
   
   docker exec -it mongodb bash <br />
   docker exec -it flamboyant_elion bash <br />
-  > show dbs
-  > use sampledb
-  > db.items.save({"name":"Pineapple","uid":4.0,"img":"/img/a.png"})
-  > db.people.save({ firstname: "Maria", lastname: "Raboy" })
-  > db.people.find({ firstname: "Nic" })
+  > show dbs <br />
+  > use sampledb <br />
+  > db.items.save({"name":"Pineapple","uid":4.0,"img":"/img/a.png"}) <br />
+  > db.people.save({ firstname: "Maria", lastname: "Raboy" }) <br />
+  > db.people.find({ firstname: "Nic" }) <br />
   
-  docker run -d -p 127.0.0.1:27017:27017 -v ~/Documents/repo/mesj/cmpe282/data:/data/db --name mongodb mongo
+  docker run -d -p 127.0.0.1:27017:27017 -v ~/Documents/repo/mesj/cmpe282/data:/data/db --name mongodb mongo <br />
   export MONGODB_URI=mongodb://127.0.0.1:27017/sampledb
