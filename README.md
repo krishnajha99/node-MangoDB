@@ -47,4 +47,28 @@ To build this sample locally, you can either build using Docker, or using NPM.
   > db.people.find({ firstname: "Nic" }) <br />
   
   docker run -d -p 127.0.0.1:27017:27017 -v ~/Documents/repo/mesj/cmpe282/data:/data/db --name mongodb mongo <br />
-  export MONGODB_URI=mongodb://127.0.0.1:27017/sampledb
+  export MONGODB_URI=mongodb://127.0.0.1:27017/sampledb <br />
+  
+  db.articles.save({"name": "Fruit Smoothies", /
+      "shortCode": "FR", /
+      "pages": { /
+          "Home": { /
+              "title": "Fruit Smoothies :: Project Homepage", /
+              "headerImage": "/img/a.png", /
+              "subtitle": "Fruit Smoothies - Project Homepage" /
+          }, /
+          "Rating": { /
+              "title": "Fruit Smoothies :: Rate the Superheroes" / 
+              "headerImage": "/img/a.png", /
+              "subtitle": "Rate the smoothies" /
+          }, /
+          "Leaderboard": { /
+              "title": "Fruit Smoothies :: Current Leaderboard", /
+              "headerImage": "/img/a.png", /
+              "subtitle": "Current Leaderboard - Orange smoothie? Yuck." /
+          } /
+      } /
+  }) <br />
+
+db.articles.save({"category":"Design"}) <br />
+db.articles.save({"category":"Fitness"})
